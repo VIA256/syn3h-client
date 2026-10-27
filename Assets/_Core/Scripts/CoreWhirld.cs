@@ -246,11 +246,13 @@ public class CoreWhirld : MonoBehaviour
 		//            return;
 		//        }
 
+#if ENVIRO
 		if (EnviroSky.instance)
 		{
 			EnviroSky.instance.SetInternalTimeOfDay(time * 24);
 			return;
 		}
+#endif
 
 		Debug.Log("CoreWhirld :: SetTime :: No active time management systems found");
 	}
